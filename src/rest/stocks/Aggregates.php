@@ -5,7 +5,7 @@ use PolygonIO\rest\Mappers;
 use PolygonIO\rest\RestResource;
 
 class Aggregates extends RestResource {
-    public function get($tickerSymbol, $multiplier, $from, $to, $timespan = 'days', $params = []){
+    public function get($tickerSymbol, $multiplier, $from, $to, $timespan = 'day', $params = []){
         return $this->_get('/v2/aggs/ticker/'.$tickerSymbol.'/range/'.$multiplier.'/'.$timespan.'/'.$from.'/'.$to, $params);
     }
 
