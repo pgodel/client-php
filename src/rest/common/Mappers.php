@@ -45,7 +45,9 @@ class Mappers {
     }
 
     public static function snapshotAggV2 ($snap) {
-        $snap['tickerSymbol'] = $snap['T'];
+        if (isset($snap['T'])) {
+            $snap['tickerSymbol'] = $snap['T'];
+        }       
         $snap['volume'] = $snap['v'];
         $snap['open'] = $snap['o'];
         $snap['close'] = $snap['c'];
