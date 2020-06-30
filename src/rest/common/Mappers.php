@@ -54,7 +54,9 @@ class Mappers {
         $snap['high'] = $snap['h'];
         $snap['low'] = $snap['l'];
         $snap['timestamp'] = $snap['t'];
-        $snap['numberOfItems'] = $snap['n'];
+        if (isset($snap['n'])) {
+            $snap['numberOfItems'] = $snap['n'];
+        }
         return $snap;
     }
 
